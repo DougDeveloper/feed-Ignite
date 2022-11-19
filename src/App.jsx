@@ -1,11 +1,15 @@
-import { Post } from "./Post"
+// ----- IMPORTS COMPONENTS ----- //
+
 import { Header } from "./components/Header"
+import { Post } from "./components/Post"
+import { Sidebar } from "./components/Sidebar"
+
+// ----- IMPORTS COMPONENTS ----- //
 
 // ----- IMPORTS CSS ----- //
 
 import "./global.css"
 import styles from "./App.module.css"
-import { Sidebar } from "./components/Sidebar"
 
 // ----- IMPORTS CSS ----- //
 
@@ -18,10 +22,8 @@ export function App() {
         <Sidebar />
 
         <main>
-          <Post 
-          author="Douglas"
-          content="ngkadnlkasdlkfmlsdmlksdmlksdlknckadsnfvjadsjk"
-          />
+          <Post />
+          <Post />
         </main>
 
       </div>
