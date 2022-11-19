@@ -1,0 +1,10 @@
+.wrapper{
+    max-width: 70rem; /* largura do side bar(256px) + distância do side bar para o feed(32px) + largura do feed(832px) dividido por 16*/
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: 256px 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
