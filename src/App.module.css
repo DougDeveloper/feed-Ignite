@@ -8,3 +8,14 @@
     gap: 2rem;
     align-items: flex-start;
 }
+
+@media (max-width: 768px){
+    html{
+        /* este valor veio de 16px, que é o tamanho padrão da fonte no html, multiplicado por 100, pois queremos em porcentagem, daí dividimos por 14, que é o valor que queremos no momento. */
+        font-size: 87.5%;
+    }
+
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}

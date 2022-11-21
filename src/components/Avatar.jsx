@@ -1,7 +1,10 @@
 import styles from "./Avatar.module.css"
 
-export function Avatar(props){
+                        //hasBorder possui, agora, um valor padrão, o true. aqui estamos
+                        // desestruturando o Avatar e pegando somente essas duas propriedades
+export function Avatar({ hasBorder = true, src }){
     return(
-        <img className={styles.avatar} src={props.src} />
+                        //se o avatar possui borda, aplique-se, se não, sem borda.
+        <img className={hasBorder ? styles.AvatarWithBorder : styles.Avatar} src={src} />
     )
 }

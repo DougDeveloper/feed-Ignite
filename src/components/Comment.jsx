@@ -5,7 +5,7 @@ import styles from "./Comment.module.css"
 export function Comment(){
     return(
         <div className={styles.comment}>
-            <Avatar src="https://github.com/grynhas.png" alt="" />
+            <Avatar hasBorder={false} src="https://github.com/grynhas.png" alt="" />
 
             <div className={styles.commentBox}>
                 <div className={styles.commentContent}>
@@ -20,7 +20,7 @@ export function Comment(){
                         </button>
                     </header>
                 </div>
-                    <p>Muito bom Devon, parabéns!! 👏👏</p>
+                    <p>Muito bom Douglas, parabéns!! 👏👏</p>
                 <footer>
                     <button>
                         <ThumbsUp size={20} />
