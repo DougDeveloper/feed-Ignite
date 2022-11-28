@@ -1,21 +1,36 @@
+import { format, formatDistanceToNow } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
+
 import { Avatar } from "./Avatar"
 import { Comment } from "./Comment"
 import styles from "./Post.module.css"
 
-export function Post(){
+
+export function Post({ author, publishedAt }){
+// aqui estamos formatando a data do post
+    const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'de' uuuu 'às' HH:mm'h'", {
+        locale: ptBR
+    }).format(publishedAt)
+
+    const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, {
+        locale: ptBR,
+    })
+
     return(
         <article className={styles.post}>
             {/* início do cabeçalho do post */}
             <header>
                 <div className={styles.author}>
-                    <Avatar src="https://github.com/DougDeveloper.png" alt="" />
+                    <Avatar src={author.avatarUrl} alt="" />
                     <div className={styles.authorInfo}>
-                        <strong>Douglas Ferreira</strong>
-                        <span>Web Developer</span>
+                        <strong>{author.name}</strong>
+                        <span>{author.role}</span>
                     </div>
                 </div>
-
-                <time title="19 de novembro de 2022 às 15:30" dateTime="2022-11-19 03:30pm">Publicado há 1h</time>
+                
+                <time title={publishedDateFormatted} dateTime="2022-11-19 03:30:00">
+                    {publishedDateRelativeToNow}
+                </time>
             </header>
             {/* fim do cabeçalho do post */}
 
